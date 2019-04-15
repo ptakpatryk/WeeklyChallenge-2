@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+}
+
+
+/* HEADER START */
+header {
+  position: relative;
+  background-image: url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+/* NAWIGACJA START */
+.logo {
+  font-family: Pacifico, serif;
+  font-size: 3.3em;
+  font-weight: lighter;
+  color: #262626;
+  margin-top: 30px;
+}
+nav {
+  width: 77vw;
+  top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #262626;
+  padding-top: 5px;
+}
+
+nav a:hover {
+  border-top: 3px solid #ff6033;
+}
+
+nav ul li:not(:first-child) {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  margin-left: 35px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+/* NAWIGACJA END */
+/* HEADER INFO */
+.info {
+  width: 77vw;
+  margin: 235px auto 0px;
+}
+
+h2 {
+  font-size: 4em;
+  font-weight: 900;
+}
+
+p {
+  font-size: 1.1em;
+  margin-top: 20px;
+  line-height: 1.6em;
+}
+
+button {
+  background: #ff6033;
+  width: 200px;
+  height: 55px;
+  font-size: 1.1em;
+  font-weight: 100;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+}
+
+@keyframes scrolljump {
+  from {
+    bottom: 70px;
+  }
+  to {
+    bottom: 40px;
+  }
+}
+
+.scroll {
+  background-image: url(../img/scroll.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 40px;
+  position: absolute;
+  bottom: 40px;
+  left: 49%;
+  animation: scrolljump 1000ms infinite ease-in-out;
+}
