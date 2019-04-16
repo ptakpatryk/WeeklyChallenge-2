@@ -12,6 +12,14 @@ body {
   font-size: 15px;
 }
 
+/* .container {
+  background: blue;
+  width: 100vw;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+} */
 
 /* HEADER START */
 header {
@@ -65,7 +73,7 @@ nav ul li:not(:first-child) {
   margin-top: 60px;
 }
 /* NAWIGACJA END */
-/* HEADER INFO */
+/* HEADER INFO AND SCROLL */
 .info {
   width: 77vw;
   margin: 235px auto 0px;
@@ -91,14 +99,24 @@ button {
   color: #fff;
   border: none;
   margin-top: 20px;
+  box-shadow: 3px 5px 15px rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 300ms;
+}
+
+button:hover {
+  background: #00aeae;
+  transform: scale(1.05);
 }
 
 @keyframes scrolljump {
   from {
     bottom: 70px;
+    opacity: 0;
   }
   to {
     bottom: 40px;
+    opacity: 1;
   }
 }
 
@@ -110,5 +128,45 @@ button {
   position: absolute;
   bottom: 40px;
   left: 49%;
-  animation: scrolljump 1000ms infinite ease-in-out;
+  animation: scrolljump 1300ms infinite ease-in-out;
+}
+
+/* BODY SECTION */
+
+.about {
+  display: flex;
+  background: #00b4b4;
+  width: 100vw;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-about {
+  background: url(../img/about-berries.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50vw;
+  max-width: 630px;
+  height: 50vw;
+  max-height: 620px;
+  margin-right: 60px;
+}
+
+.info-about {
+  width: 40vw;
+  max-width: 510px;
+  color: #fff;
+}
+
+.info-about {
+  line-height: 1.8em;
+}
+
+h1 {
+  font-size: 6em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
