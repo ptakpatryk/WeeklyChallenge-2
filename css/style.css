@@ -12,15 +12,6 @@ body {
   font-size: 15px;
 }
 
-/* .container {
-  background: blue;
-  width: 100vw;
-  height: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-} */
-
 /* HEADER START */
 header {
   position: relative;
@@ -132,26 +123,24 @@ button:hover {
 }
 
 /* BODY SECTION */
-
 .about {
   display: flex;
   background: #00b4b4;
-  width: 100vw;
-  height: 700px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.img-about {
-  background: url(../img/about-berries.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.container {
+  width: 77vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4em 0;
+}
+
+.img-about img {
   width: 50vw;
   max-width: 630px;
-  height: 50vw;
-  max-height: 620px;
-  margin-right: 60px;
 }
 
 .info-about {
