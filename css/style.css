@@ -138,12 +138,16 @@ button:hover {
   padding: 4em 0;
 }
 
-.img-about img {
-  width: 50vw;
-  max-width: 630px;
+.img-about {
+  background: url("../img/berries.png")  center / contain no-repeat;
+  width: 60vw;
+  height: 643px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .info-about {
+
   width: 40vw;
   max-width: 510px;
   color: #fff;
@@ -158,4 +162,138 @@ h1 {
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.1;
+}
+
+.service {
+  display: flex;
+  background: #70bfff;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+
+.bg-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("../img/tomato.png") center / contain no-repeat;
+  max-width: 762px;
+  height: 527px;
+  object-fit: contain;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cat-tab {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #262626;
+  width: 400px;
+  height: 100px;
+  box-shadow: 3px 5px 15px rgb(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  transition: transform 300ms;
+}
+
+.cat-tab:hover {
+  background: #262626;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.cat-tab:hover .cat-icon {
+  border-color: #fff;
+}
+
+.cat-tab h3 {
+  flex-shrink: 2;
+  margin-left: 25px;
+}
+
+.cat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-left: 1px solid #262626;
+  font-size: 2.7em;
+}
+
+/* --- GALLERY ---  */
+
+#gallery {
+  background-color: #ffe92f;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+#gallery p {
+  width: 580px;
+  text-align: center;
+}
+
+#gallery .container {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.gallery-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  height: 1100px;
+  grid-gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1.5fr;
+  margin-top: 50px;
+}
+
+.item1 {
+  grid-area: 1 / 1 / 3 / 5;
+  background: url(../img/img1.png) center / cover no-repeat;
+  transition: transform 300ms;
+}
+
+.item2 {
+  grid-area: 1 / 5 / 2 / 7;
+  background: url(../img/img2.png) center / cover no-repeat;
+  transition: transform 500ms;
+}
+
+.item3 {
+  grid-area: 2 / 5 / 3 /7;
+  background: url(../img/img3.png) center / cover no-repeat;
+}
+
+.item4 {
+  grid-area: 3 / 1 / 4 / 4;
+  background: url(../img/img4.png) center / cover no-repeat;
+}
+
+.item5 {
+  grid-area: 3 / 4 / 4 / 7;
+  background: url(../img/img5.png) center / cover no-repeat;
+}
+
+.img-deg {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.img-deg:hover {
+  transform: scale(1.1) rotate(30deg);
 }
