@@ -343,11 +343,11 @@ h1 {
 }
 
 #subscribe h3 {
-  font-size: 2em;
+  font-size: 2.6em;
 }
 
 #subscribe p {
-  width: 42vw;
+  width: 30vw;
 }
 
 #subscribe label {
@@ -355,25 +355,37 @@ h1 {
 }
 
 #subscribe .container {
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   text-align: left;
-}
-
-.sub-input button {
-  margin-left: 2em;
-}
-
-.sub-input input {
-  width: 45em;
-  height: 4em;
-  padding: 2em;
+  padding-left: 8%;
+  position: relative;
+  height: 25vw;
+  min-height: 50vh;
 }
 
 .sub-input button {
   background: #97BA2C;
+  margin-left: 2.1em;
+  width: 10em;
 }
 
+.sub-input input {
+  width: 43em;
+  height: 4em;
+  padding: 2em;
+}
+
+.sub-img {
+  background: url(../img/sub.png) center / cover no-repeat;
+  width: 100%;
+  max-width: 566px;
+  height: 345px;
+  max-height: 345px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
 /* --- BLOG SECTION */
 #blog {
   background-color: #B07CF8;
@@ -386,6 +398,7 @@ h1 {
 #blog .container {
   flex-direction: column;
   color: #fff;
+  padding: 5% 0;
 }
 
 #blog p {
@@ -404,27 +417,172 @@ h1 {
 .blog-post {
   width: 30%;
   height: 300px;
-  background: red;
+  background: #f72b3b;
+  overflow: hidden;
 }
 
 .blog-item1 {
-  background: url(../img/img1.png) center / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.5) 24%, rgba(0,0,0,0) 61%, rgba(0,0,0,0) 100%), url(../img/blog-1.png) center / cover no-repeat;
   width: 100%;
   height: 100%;
+  transition: transform 200ms ease-out;
 }
 
-figure.blog-item2 {
+.blog-item2 {
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0)), url(../img/img1.png) center / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.5) 24%, rgba(0,0,0,0) 61%, rgba(0,0,0,0) 100%),  url(../img/blog-2.png) bottom / cover no-repeat;
+  transition: transform 200ms ease-out;
+}
 
+.blog-item3 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.5) 24%, rgba(0,0,0,0) 61%, rgba(0,0,0,0) 100%),  url(../img/blog-3.png) center / cover no-repeat;
+  transition: transform 200ms ease-out;
+}
+
+.blog-item1:hover, .blog-item2:hover, .blog-item3:hover {
+  transform: translateY(-5px);
 }
 
 figure {
   position: relative;
+  padding: 8%;
 }
 
 figcaption {
   position: absolute;
-  bottom: 20%;
+  bottom: 17%;
+  font-weight: 600;
+  font-size: 1.3em;
+  max-width: 90%;
 }
+
+#blog .blog-post p {
+  position: absolute;
+  text-align: left;
+  bottom: 5%;
+  font-size: .8em;
+}
+
+.blog-post time {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 700;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .4);
+}
+
+.blog-post time::first-line {
+  font-size: 2rem;
+}
+
+.blog-btn {
+  background: #f72b3b;
+  margin-top: 50px;
+}
+
+/* FOOTER */
+
+footer {
+  background: url(../img/footer-bg.png) center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 10% 0;
+}
+
+  footer .container {
+    flex-direction: column;
+  }
+
+
+  .contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  .contact form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-intro {
+    color: #fff;
+    width: 31rem;
+    height: 3rem;
+    background: #00c4c4;
+    padding-left: 1.5em;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .form-intro::before {
+    content: "";
+    height: 100%;
+    width: .3rem;
+    background: #355b82;
+    position: absolute;
+    left: 0;
+  }
+
+  .contact input {
+    background: rgba(0, 196, 196, .5);
+    padding-left: 1.5em;
+    color: #fff;
+    width: 31rem;
+    height: 3rem;
+    border: none;
+    margin-top: 1.25rem;
+    transition: background 300ms;
+    transition: border-left 300ms;
+  }
+
+  .contact input::placeholder {
+    color: #fff;
+  }
+
+  .contact input:focus {
+    background: rgba(0, 196, 196, 1);
+    border-left: .3rem solid #355b82;
+    outline: none;
+  }
+
+  textarea {
+    background: rgba(0, 196, 196, .5);
+    padding: 1em 0 0 1.5em;
+    color: #fff;
+    width: 31rem;
+    height: 10rem;
+    border: none;
+    margin-top: 1.25rem;
+    transition: background 300ms;
+    transition: border-left 300ms;
+    resize: none;
+  }
+
+  textarea:focus {
+    background: rgba(0, 196, 196, 1);
+    border-left: .3rem solid #355b82;
+    outline: none;
+  }
+
+  textarea::placeholder {
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    font-size: 1em;
+  }
+
+  .adress p {
+    margin: 0;
+  }
+
+  .adress {
+  }
