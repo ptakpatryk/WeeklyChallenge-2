@@ -140,7 +140,8 @@ button:hover {
 
 .img-about {
   background: url("../img/berries.png")  center / contain no-repeat;
-  width: 60vw;
+  width: 60vmax;
+  min-width: 300px;
   height: 643px;
   margin-right: 50px;
   margin-left: 50px;
@@ -489,20 +490,20 @@ figcaption {
 
 /* FOOTER */
 
-footer {
+.footer-form {
   background: url(../img/footer-bg.png) center / cover no-repeat;
   display: flex;
   justify-content: center;
-  padding: 10% 0;
+  padding: 3% 0;
 }
 
-  footer .container {
+.footer-form .container {
     flex-direction: column;
   }
 
 
   .contact {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
@@ -582,7 +583,36 @@ footer {
 
   .adress p {
     margin: 0;
+    font-size: 1.2em;
   }
 
-  .adress {
+  .adress h3 {
+    margin-top: 15px;
   }
+
+/* ---- FINAL FOOTER ----- */
+
+footer {
+  background: #262626;
+  color: #b9b9b9;
+  display: flex;
+  justify-content: center;
+}
+
+footer .container {
+  padding: 1.4em;
+}
+
+.logo-footer {
+  font-family: Pacifico, serif;
+  font-size: 1.6em;
+  font-weight: lighter;
+}
+
+footer p {
+  font-size: .9em;
+}
+
+footer p strong {
+  color: #f12b55;
+}
