@@ -141,8 +141,8 @@ button:hover {
 .img-about {
   background: url("../img/berries.png")  center / contain no-repeat;
   width: 60vmax;
-  min-width: 300px;
-  height: 643px;
+  height: 0;
+  padding-top: 50%;
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -615,4 +615,86 @@ footer p {
 
 footer p strong {
   color: #f12b55;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+
+  header {
+    height: 100%;
+    background-position: 60% 0%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li:not(:first-child) {
+    margin: 15px 0 0;
+  }
+
+  nav ul li:first-child {
+    margin-right: 0;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .info {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+
+  .img-about {
+    width: 80vmin;
+    margin: 0;
+    height: 0;
+    padding-top: 100%;
+  }
+
+  .info-about {
+    width: 85vw;
+    text-align: center;
+  }
+
+  .service .container {
+    flex-direction: column-reverse;
+  }
+
+  .service .container .categories {
+    margin: 50px 0;
+  }
+
+  .bg-img {
+    width: 90vw;
+    height: 0%;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  .bg-img h1 {
+    position: absolute;
+    font-size: 20vw;
+    top: 25%;
+  }
+
+  .cat-tab {
+    width: 85vw;
+  }
+
+  .cat-tab:hover {
+    transform: scale(1.03);
+  }
+
+  .cat-tab h3 {
+    width: 50%;
+  }
 }
